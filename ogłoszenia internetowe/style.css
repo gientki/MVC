@@ -1,0 +1,338 @@
+
+body {
+    margin:0;
+    background-color: #606060;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 25px;
+  color:white;
+  text-align: center;
+  font-family:'Courier New', Courier, monospace;
+}
+
+a{
+    text-decoration: none;
+    margin-bottom: 0;
+}
+div[class*=box] {
+ /*border:1px solid white;*/
+  margin-left: auto;
+  margin-right: auto;
+  height: 45px;
+  width: 200px; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 0;
+}
+button{
+  all:unset;
+}
+.btn,button {
+  line-height: 40px;
+  height: 40px;
+  text-align: center;
+  width: 250px;
+  cursor: pointer;
+  margin-bottom: 0;
+}
+
+/* 
+========================
+      BUTTON THREE
+========================
+*/
+.btn-three,button{
+  color: #FFF;
+  transition: all 0.5s;
+  position: relative;
+}
+.btn-three::before,
+button::before{
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s;
+}
+.btn-three:hover::before,
+button:hover::before{
+  opacity: 0 ;
+  transform: scale(0.5,0.5);
+}
+.btn-three::after,
+button::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  transform: scale(1.2,1.2);
+}
+.btn-three:hover::after,
+button:hover::after{
+  opacity: 1;
+  transform: scale(1,1);
+}
+.offer
+{
+  position: relative; /* Pozwala na umieszczenie X w rogu */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  width: 250px;
+  -webkit-box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+  box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width:50%;
+  margin-bottom: 20px;
+  min-height: 75px;
+  padding:5px;
+  border-radius: 15px;
+}
+h1
+{
+   font-size: 30px;
+    margin: 0;
+    text-transform: capitalize;
+    font-weight: 100;
+}
+/* Styl dla modala */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Zawartość modala */
+.modal-content {
+  background-color: #6f6f6f;
+  margin: 15% auto;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  border-radius: 10px;
+}
+
+/* Przycisk zamykania */
+.close {
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: white;
+  color: #606060;
+  border: none;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+  transition: 0.3s;
+}
+.close-btn:hover {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgb(243, 0, 0);
+  color: #606060;
+  border: none;
+  width: 25px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  position: absolute;
+  bottom: 20px;
+  transform: translateX(-50%);
+}
+/*menu logowania i rejestracji*/
+.validate{
+  -webkit-box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+  box-shadow: 8px 9px 25px -7px rgba(0, 0, 0, 1);
+  margin-top:2%;
+  width:50%;
+  height: 450px;
+  position: relative;
+  margin-left: auto;
+  margin-right:auto;
+  padding-left: 150px;
+  
+}
+.registry
+{
+  height: 525px;
+}
+#zaloguj
+{
+  position: relative; 
+  margin-top: 150px;
+  margin-left:-150px;
+}
+
+input,
+span,
+label,
+textarea {
+  display: block;
+  border: none;
+  color:white;
+  font-family:'Courier New', Courier, monospace;
+  font-size: 15px;
+}
+
+input:focus {
+  outline: 0;
+}
+/* Question */
+
+input.question{
+  font-size: 48px;
+  font-weight: 300;
+  border-radius: 2px;
+  margin: 0;
+  border: none;
+  width: 80%;
+  background: rgba(0, 0, 0, 0);
+  transition: padding-top 0.2s ease, margin-top 0.2s ease;
+  overflow-x: hidden; /* Hack to make "rows" attribute apply in Firefox. */
+  height: 60px;
+  padding-top: 25px;
+  margin-top: 50px;
+}
+/* Underline and Placeholder */
+
+input.question + label{
+  display: block;
+  position: relative;
+  white-space: nowrap;
+  padding: 0;
+  margin: 0;
+  width: 10%;
+  border-top: 1px solid rgb(255, 255, 255);
+  -webkit-transition: width 0.4s ease;
+  transition: width 0.4s ease;
+  height: 0px;
+}
+
+input.question:focus + label{
+  width: 80%;
+}
+
+
+input.question:focus + label > span,
+input.question:valid + label > span {
+  top: -100px;
+  font-size: 22px;
+  color: #ffffff;
+  
+}
+
+input.question:valid + label{
+  border-color: rgb(255, 255, 255);
+}
+
+input.question:invalid
+{
+  box-shadow: none;
+}
+
+input.question + label > span
+{
+  font-weight: 300;
+  margin: 0;
+  position: absolute;
+  color: #ffffff;
+  font-size: 48px;
+  top: -66px;
+  left: 0px;
+  z-index: -1;
+  -webkit-transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+  transition: top 0.2s ease, font-size 0.2s ease, color 0.2s ease;
+}
+
+input[type="submit"] {
+  -webkit-transition: opacity 0.2s ease, background 0.2s ease;
+  transition: opacity 0.2s ease, background 0.2s ease;
+  display: block;
+  opacity: 0;
+  margin: 10px 0 0 0;
+  padding: 10px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background: #EEE;
+}
+
+input[type="submit"]:active {
+  background: #999;
+}
+
+input.question:valid ~ input[type="submit"], textarea.question:valid ~ input[type="submit"] {
+  -webkit-animation: appear 1s forwards;
+  animation: appear 1s forwards;
+}
+
+input.question:invalid ~ input[type="submit"], textarea.question:invalid ~ input[type="submit"] {
+  display: none;
+}
+
+@-webkit-keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  100% {
+    opacity: 1;
+  }
+}
+input[type=radio]
+{
+  width:50%;
+}
+textarea
+{
+  margin:25px;
+  margin-left: auto;
+  margin-right: auto;
+  width:50%;
+  height:50px;
+}
